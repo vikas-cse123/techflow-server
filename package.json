@@ -1,0 +1,17 @@
+{
+  "name": "techflow",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev":"node --watch  --env-file=.env app.js",
+    "start":"node --watch  --env-file=.env app.js"
+    
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
