@@ -32,6 +32,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+      select:false
     },
     avatarUrl: {
       type: String,
@@ -64,4 +65,3 @@ const User = mongoose.model("user", userSchema);
 export default User;
 
 
-//everytime password hashed when user docs updates

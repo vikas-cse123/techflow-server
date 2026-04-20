@@ -15,6 +15,11 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    status:{
+      type:String,
+      enum:["draft","published"],
+      default:"draft"
+    },
     tags: {
       type: [
         {
@@ -23,16 +28,7 @@ const blogSchema = new mongoose.Schema(
         },
       ],
       default: [],
-    },
-    categories: {
-      type: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Category",
-        },
-      ],
-      default: [],
-    },
+    }
   },
   {
     timestamps: true,

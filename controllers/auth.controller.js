@@ -104,7 +104,7 @@ export const verifyOtp = async (req, res, next) => {
 export const login = async (req, res, next) => {
   try {
     const { email, password, isRememberMe } = req.body;
-    const user = await User.findOne({ email, isEmailVerified: true });
+    const user = await User.findOne({ email, isEmailVerified: true }).select("+password");
     if (!user) {
       return res
         .status(400)
